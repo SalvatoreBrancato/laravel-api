@@ -17,7 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->string('lang');
             $table->string('path')->nullable();
             $table->timestamps();
         });

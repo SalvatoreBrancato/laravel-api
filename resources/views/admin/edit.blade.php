@@ -28,11 +28,6 @@
         </div>
 
         <div class="form-group">
-            <label for="projects-lange" class="form-label">Lang</label>
-            <input type="text" id="projects-lange" name="lang"  class="form-control" value="{{$mod_post->lang}}">
-        </div>
-
-        <div class="form-group">
             <label for="type" class="form-label">Types</label>
             <select class="form-select" name="type_id" id="type">
                 <option value="">- - Scegli Un Type - - </option>

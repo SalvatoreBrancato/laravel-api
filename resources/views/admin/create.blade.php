@@ -27,11 +27,6 @@
         </div>
 
         <div class="form-group">
-            <label for="projects-lang" class="form-label">Lang</label>
-            <input type="text" id="projects-lang" name="lang" class="form-control">
-        </div>
-
-        <div class="form-group">
             <label for="type" class="form-label">Types</label>
             <select class="form-select @error('type_id') is-invalid @enderror" name="type_id" id="type">
                 <option value="">- - Scegli Un Type - - </option>

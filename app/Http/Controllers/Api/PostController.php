@@ -9,7 +9,7 @@ use App\Models\Admin\Project;
 class PostController extends Controller
 {
     public function index(){
-        $posts = Project::all();
+        $posts = Project::with('type','technologies')->paginate(4);
         return response()->json([
         'success' => true,
         'posts' => $posts

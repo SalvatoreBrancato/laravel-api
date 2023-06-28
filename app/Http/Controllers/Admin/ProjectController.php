@@ -57,7 +57,7 @@ class ProjectController extends Controller
         // ]);
 
         $form_data = $request->all();
-        $create = Project::create($form_data);
+        
         //$new_project = new Project();
         //$new_project->fill($form_data);
 
@@ -67,6 +67,8 @@ class ProjectController extends Controller
 
             $form_data['path'] = $img_path;
         }
+
+        $create = Project::create($form_data);
 
         if( $request->has('technology') ){
             $create ->technologies()->attach($request->technology);
