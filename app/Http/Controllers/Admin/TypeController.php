@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Admin\Type;
 use Illuminate\Http\Request;
 
+
 class TypeController extends Controller
 {
     /**

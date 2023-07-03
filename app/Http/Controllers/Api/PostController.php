@@ -8,8 +8,15 @@ use App\Models\Admin\Project;
 
 class PostController extends Controller
 {
-    public function index(){
-        $posts = Project::with('type','technologies')->paginate(4);
+    public function index(Request $request){
+        if ($request->has('type_id')) {
+		
+            $posts = Project::with('type', 'technologies')->where('type_id', $request->type_id)->paginate(4);
+        } else {
+            $posts = Project::with('type', 'technologies')->paginate(4);
+        }
+
+    
         return response()->json([
         'success' => true,
         'posts' => $posts

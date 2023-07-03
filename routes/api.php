@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Api\PostController;
+use App\Http\Controllers\Api\TypesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,3 +21,4 @@ use App\Http\Controllers\Api\PostController;
 // });
 
 Route::get('/posts',[PostController::class, 'index']);
+Route::get('/types',[TypesController::class, 'index']);
